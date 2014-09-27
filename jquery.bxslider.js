@@ -590,6 +590,11 @@
 		var populatePager = function(){
 			var pagerHtml = '';
 			var pagerQty = getPagerQty();
+
+			if (pagerQty === 1) {
+				return;
+			}
+
 			// loop through each pager item
 			for(var i=0; i < pagerQty; i++){
 				var linkContent = '';
