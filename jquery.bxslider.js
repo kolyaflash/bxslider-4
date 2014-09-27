@@ -206,7 +206,8 @@
 			// make modifications to the viewport (.bx-viewport)
 			slider.viewport.css({
 				width: '100%',
-				overflow: 'hidden'
+				overflow: 'hidden',
+				position: 'relative'
 			});
 			slider.viewport.parent().css({
 				maxWidth: getViewportMaxWidth()
@@ -695,7 +696,7 @@
 			// cycle through each child
 			slider.children.each(function(index){
 				// get the image title attribute
-				var title = $(this).find('img:first').attr('title');
+				var title = $(this).find('img:first').attr('data-title');
 				// append the caption
 				if (title != undefined && ('' + title).length) {
                     $(this).append('<div class="bx-caption"><span>' + title + '</span></div>');
